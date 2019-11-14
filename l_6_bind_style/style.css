@@ -1,0 +1,18 @@
+.box {
+  /* width: 50px; */
+  display: inline;
+  background: red;
+  padding: 10px;
+  color: white;
+  margin: 20px;
+}
+
+.changeColor {
+  background: green;
+}
+
+.changeLength ::after {
+  background: greenyellow;
+  content: 'Ace';
+  margin-left: 10px;
+}

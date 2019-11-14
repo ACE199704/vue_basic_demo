@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>ref、watch的使用</title>
+</head>
+
+<body>
+  <div id="vue-app">
+    <h1>ref的使用和watch的使用</h1>
+    <p>input select textarea</p>
+    <label for="name">姓名</label>
+    <input type="text" name="name" id="name" ref="name" @keyup="getName">
+    <label for="age">年龄</label>
+    <input type="text" name="age" id="age" ref="age" @keyup="getAge">
+    <p>lazy是懒加载</p>
+    <p>你好 {{name}}</p>
+    <p>{{age}}</p>
+    <p>不建议使用watch 因为会持续监听</p>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>

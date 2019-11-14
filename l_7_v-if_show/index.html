@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>v-if 和 v-show</title>
+</head>
+<div id="vue-app">
+  <h1>v-if 和 v-show</h1>
+  <button @click="error=!error">click</button>
+  <p v-if="error">如果正确的话 ：显示这个</p>
+  <p v-else>如果错误的话 ：显示这个</p>
+  <p v-show="error">v-show的作用和v-if的区别 ：一个是消失了 一个是display:none</p>
+  <p v-show="!error">错误</p>
+
+</div>
+
+<body>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

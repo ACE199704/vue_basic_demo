@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>创建了两个组件和全局组件</h1>
+    <div id="vue-app-one">
+      <p>{{ title }}</p>
+      <Greeting/>
+    </div>
+    <div id="vue-app-two">
+      <p>{{ title }}</p>
+      <button @click="changevueone">click</button>
+      <Greeting/>
+
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

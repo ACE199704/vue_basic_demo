@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>v-for</title>
+  </head>
+
+  <body>
+    <div id="vue-app">
+      <h1>v-for</h1>
+      {{ character[0] }}
+      <ul>
+        <!-- <li v-for="randomcharacter in character">
+        {{randomcharacter}}
+      </li> -->
+        <li v-for="(randomcharacter,index) in character">
+          {{ index }}. {{ randomcharacter }}
+        </li>
+      </ul>
+
+      <ul>
+        <li v-for="(user,index) in users">
+          {{ index }}. {{ user.name }} {{ user.age }}
+        </li>
+      </ul>
+      <!-- template 不会打印出来 -->
+
+      <template v-for="(user,index) in users">
+        <h3>{{ index }} - {{ user.name }}</h3>
+        <p>age - {{ user.age }}</p>
+      </template>
+
+      <!-- 遍历对象 -->
+      <template v-for="(user,index) in users">
+        <div v-for="(val,key) in user">
+          <p>{{ key }}-{{ val }}</p>
+        </div>
+      </template>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

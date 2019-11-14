@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="vue-app">
+    <h1>Event</h1>
+    <button @click="add(1)">add</button>
+    <button @dblclick="add(10)">add10</button>
+    <button v-on:click="sub(1)">sub</button>
+    <button @dblclick="sub(10)">sub10</button>
+    <p>我的年龄是:{{ age  }}</p>
+    <!-- mouse event -->
+    <div id="canvas" @mousemove="updateXY">
+      {{x}},{{y}}
+    </div>
+    <h1>修饰符</h1>
+    <button @click.once="add(1)">add</button>
+    <p><a @click.prevent="clickHandle" href="https://www.baidu.com/">百度</a></p>
+    <h1>键盘事件</h1>
+    <label>姓名</label>
+    <input type="text" @keyup.enter="logName">
+    <label>年龄</label>
+    <input type="text" @keyup="logAge">
+    <label>年龄</label>
+    <input type="text" @keyup.alt.enter="logAge">
+
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>

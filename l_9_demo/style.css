@@ -1,0 +1,31 @@
+#canvas {
+  width: 400px;
+  height: 400px;
+  background: url("img/bag.png") center center no-repeat;
+  background-size: 40%;
+  margin: auto;
+}
+
+#canvas.brust {
+
+  background: url("img/bag-burst.png") center center no-repeat;
+  background-size: 40%;
+
+}
+
+#processing {
+  width: 200px;
+  margin: auto;
+  border: #000 2px solid;
+  margin-bottom: 40px;
+}
+
+#processing div {
+  height: 15px;
+  background: crimson;
+}
+
+#btn {
+  width: 120px;
+  margin: auto;
+}

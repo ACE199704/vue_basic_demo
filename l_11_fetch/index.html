@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>fetch获取数据</title>
+  </head>
+  <body>
+    <div id="vue-app">
+      <!-- POST -->
+      <form @submit.prevent="onSubmit">
+        <input type="text" v-model="todo.title" />
+        <input type="checkbox" v-model="todo.completed" />
+        <input type="submit" value="提交" />
+      </form>
+      <!-- GET -->
+      <template v-for="(todo,index ) in todos">
+        <p>
+          {{ todo.id }} <strong>{{ todo.title }}</strong>
+        </p>
+      </template>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
